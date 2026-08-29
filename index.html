@@ -276,6 +276,13 @@ section{
     z-index:2;
 }
 
+@media (max-width: 480px){
+    section{
+        padding-top:10px;
+        padding-bottom:14px;
+    }
+}
+
 .title{
     text-align:center;
     margin-bottom:35px;
@@ -300,6 +307,8 @@ section{
     color:var(--gold);
     font-weight:900;
     margin-bottom:42px;
+    font-size:1.3rem;
+    line-height:1.3;
 }
 
 .invite-line-1{
@@ -320,7 +329,7 @@ section{
 
 .couple-name{
     font-family:'Great Vibes', cursive;
-    font-size:clamp(2.5rem, 7vw, 5rem);
+    font-size:clamp(3rem, 8vw, 6rem);
     line-height:1;
     font-weight:400;
     color:#826A3D;
@@ -332,7 +341,7 @@ section{
 
 .and-symbol{
     font-family:'Great Vibes', cursive;
-    font-size:clamp(2rem, 6vw, 4rem);
+    font-size:clamp(2.2rem, 5vw, 4.5rem);
     color:#826A3D;
     margin:0.4rem 0 0.6rem;
     line-height:1;
@@ -532,7 +541,13 @@ button:hover{
     display:flex;
     justify-content:center;
     
-    margin:80px auto 50px auto;
+    margin:40px auto 30px auto;
+}
+
+@media (max-width: 480px){
+    .sticky-title{
+        margin:8px auto 16px auto;
+    }
 }
 
 .sticky-title h2{
@@ -708,14 +723,14 @@ footer{
 
 <div class="card">
 <h3>Time</h3>
-<p>12:00 PM</p>
+<p>12:00 PM - 4:00 PM</p>
 </div>
 
 <div class="card">
 <h3>Venue</h3>
 <p>
-Waterview in Bicentennial Park<br>
-(Park Room)
+Waterview at Bicentennial Park<br>
+Park Room
 </p>
 </div>
 
@@ -807,9 +822,8 @@ Waterview in Bicentennial Park<br>
             </button>
 
         </form>
-        <div id="rsvpSuccess" style="display:none; text-align:center; padding:30px; background:#f8f6f2; border:2px solid #947b4e; border-radius:12px; margin-top:20px; color:#7d7358; font-family:'Poppins',sans-serif;">
-            <p style="font-size:1.2rem; font-weight:600; margin:0; color:#947b4e;">Thank you for your RSVP!</p>
-            <p style="margin:12px 0 0 0; font-size:0.95rem; color:#7d7358;">See You at the Reception!</p>
+        <div id="rsvpSuccess" style="display:none; text-align:center; margin:20px auto 0; color:#7d7358; font-family:'Josefin Sans',cursive; max-width:560px; width:100%;">
+            <p style="margin:0; font-size:1.1rem; color:#7d7358; line-height:1.6; font-weight:500;">See You at the Reception!</p>
         </div>
     </div>
 </section>
