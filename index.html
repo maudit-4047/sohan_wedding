@@ -977,24 +977,11 @@ rsvpForm.addEventListener("submit", async (e) => {
     document.getElementById("rsvpForm").style.display = "none";
     document.getElementById("rsvpSuccess").style.display = "block";
     
-    // Trigger confetti
-    confetti({
-      particleCount: 120,
-      spread: 90,
-      origin: { y: 0.6 }
-    });
-    
   } catch (error) {
     console.error("Error:", error);
     // Show success message anyway since Google Sheets might still get it
     document.getElementById("rsvpForm").style.display = "none";
     document.getElementById("rsvpSuccess").style.display = "block";
-    
-    confetti({
-      particleCount: 120,
-      spread: 90,
-      origin: { y: 0.6 }
-    });
   }
 });
 
