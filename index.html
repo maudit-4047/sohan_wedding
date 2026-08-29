@@ -299,6 +299,7 @@ section{
     letter-spacing:5px;
     color:var(--gold);
     font-weight:900;
+    margin-bottom:24px;
 }
 
 .invite-line-1{
@@ -306,7 +307,15 @@ section{
 }
 
 .invite-line-2{
-    margin-bottom:58px;
+    margin-bottom:0;
+}
+
+.invitation-inner{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:0.5rem;
 }
 
 .couple-name{
@@ -318,15 +327,16 @@ section{
     text-align:center;
     word-break:keep-all;
     margin:0;
+    display:block;
 }
-
-
 
 .and-symbol{
     font-family:'Great Vibes', cursive;
     font-size:clamp(2rem, 6vw, 4rem);
     color:#826A3D;
-    margin:0.6rem 0 0.9rem;
+    margin:0.2rem 0 0.4rem;
+    line-height:1;
+    text-align:center;
 }
 
 @media (max-width: 768px){
