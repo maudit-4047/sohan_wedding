@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -713,54 +713,14 @@ Waterview in Bicentennial Park<br>
 
 </section>
 
-<!-- VENUE
- 
-<<section class="reveal">
-
-<div class="title">
-<h2>Venue</h2>
-</div>
-
-<div style="text-align:center;">
-
-    <p style="margin-bottom:25px;">
-        Bicentennial Drive<br>
-        Sydney Olympic Park NSW 2127
-    </p>
-
-\    <div class="map-buttons">
-\
-\    <a
-\       href="https://maps.google.com/?q=Waterview+in+Bicentennial+Park"
-\        target="_blank"
-\       class="map-icon">
-\
-\       <span class="icon"></span>
-\        <span>Google Maps</span>
-\
-\    </a>
-\
-\    <a
-\       href="https://maps.apple.com/place?place-id=I345CF02596EB05A1&address=Bicentennial+Park%2C+Bicentennial+Dr%2C+Sydney+Olympic+Park+NSW+2127%2C+Australia&ider=9902"
-\        target="_blank"
-\       class="map-icon">
-\
-\       <span class="icon"></span>
-\        <span>Apple Maps</span>
-\
-\    </a>
-\
-\</div>
-\
-\</div>
-\
-\</section>>-->
+<!-- VENUE -->
+<!-- Commented out for now -->
 \
 \
 \
-\<!-- RSVP -->
+<!-- RSVP -->
 \
-\<section class="reveal">
+<section class="reveal">
 \   <div class="title">
 \        <h2>RSVP</h2>
 \       
@@ -804,15 +764,15 @@ Waterview in Bicentennial Park<br>
 \!-- <section class="reveal">
 \
 \div class="title">
-\<h2>Digital Guestbook</h2>
+<h2>Digital Guestbook</h2>
 \p>Leave your wishes for the happy couple</p>
-\</div>
+</div>
 \
-\<form onsubmit="event.preventDefault();saveMessage();">
+<form onsubmit="event.preventDefault();saveMessage();">
 \
-\<input id="guestName" placeholder="Your Name">
+<input id="guestName" placeholder="Your Name">
 \
-\<textarea
+<textarea
 \d="guestMessage"
 \rows="5"
 \laceholder="Write your wishes"></textarea>
@@ -829,13 +789,13 @@ Waterview in Bicentennial Park<br>
 \
 \
 \
-\footer>
+\<footer>
 
 
 
 <p>Can't wait to celebrate with you</p>
 
-</footer>
+</<footer>
 
 <script>
 
@@ -851,7 +811,7 @@ for(let i=0;i<25;i++){
 
 let flower=document.createElement("span");
 
-const icons=["❀","✦","❁","✧"];
+const icons=["â€","âœ¦","â","âœ§"];
 
 flower.innerHTML=
 icons[Math.floor(Math.random()*icons.length)];
@@ -1013,3 +973,4 @@ loadMessages();
 
 </body>
 </html>
+
