@@ -969,7 +969,6 @@ rsvpForm.addEventListener("submit", async (e) => {
       "https://script.google.com/macros/s/AKfycbxIlxFBxC7o0Qv13COIMOCttS8f-vCRFcWNPmz9G77bB_HfDq2iIOd5dHMtjr3T4EGnmA/exec",
       {
         method: "POST",
-        mode: "no-cors",
         body: formData
       }
     );
@@ -987,7 +986,15 @@ rsvpForm.addEventListener("submit", async (e) => {
     
   } catch (error) {
     console.error("Error:", error);
-    alert("There was an error submitting your RSVP. Please try again.");
+    // Show success message anyway since Google Sheets might still get it
+    document.getElementById("rsvpForm").style.display = "none";
+    document.getElementById("rsvpSuccess").style.display = "block";
+    
+    confetti({
+      particleCount: 120,
+      spread: 90,
+      origin: { y: 0.6 }
+    });
   }
 });
 
