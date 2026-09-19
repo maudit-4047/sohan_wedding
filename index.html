@@ -313,12 +313,14 @@ section{
 
 .invite-line-1{
     margin-bottom:50px;
-    margin-top:15px;
     
+    font-family:'Josefin Sans', sans-serif;
 }
 
 .invite-line-2{
-    margin-bottom:50px;
+    margin-bottom:40px;
+    font-family:'Josefin Sans', sans-serif;
+    
     
 }
 
@@ -1012,19 +1014,37 @@ image.style.transform=
 /* RSVP Form Submission */
 
 const rsvpForm = document.getElementById("rsvpForm");
+const rsvpSubmitButton = rsvpForm.querySelector('button[type="submit"]');
+let rsvpSubmissionInProgress = false;
 
 rsvpForm.addEventListener("submit", async (e) => {
   e.preventDefault();
+
+    if (rsvpSubmissionInProgress) {
+        return;
+    }
   
   const name = document.getElementById("rsvpName").value.trim();
   const attending = document.getElementById("rsvpAttendance").value;
   const guestCount = document.getElementById("guestCount").value || "0";
   const message = document.getElementById("rsvpMessage").value.trim();
+    const submissionKey = `rsvpSubmitted:${JSON.stringify({ name, attending, guestCount, message })}`;
   
   if (!name || !attending) {
     alert("Please fill in all required fields.");
     return;
   }
+
+    if (localStorage.getItem(submissionKey) === "true") {
+        rsvpForm.style.display = "none";
+        document.getElementById("rsvpSuccess").style.display = "block";
+        return;
+    }
+
+    rsvpSubmissionInProgress = true;
+    rsvpSubmitButton.disabled = true;
+    rsvpSubmitButton.textContent = "Submitting...";
+    localStorage.setItem(submissionKey, "true");
   
   try {
     const formData = new FormData();
